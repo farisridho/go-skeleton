@@ -4,6 +4,8 @@ import (
     "fmt"
     "github.com/farisridho/go-skeleton/shared/config"
 )
+
+
 type Container struct {
     Config *config.Config
 }
