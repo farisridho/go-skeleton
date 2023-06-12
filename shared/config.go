@@ -14,6 +14,21 @@ type Config struct {
 	Port    string
 }
 
+type PosgreSQLConfig struct {
+	Username           string
+	Password           string
+	Schema             string
+	Host               string
+	Port               int
+	MaxIdleConnections int
+	MaxOpenConnections int
+	DebugMode          bool
+}
+
+type Database struct {
+	PostgreSQL PosgreSQLConfig
+}
+
 func NewConfig(path string) *Config {
 	fmt.Println("Try new config ....")
 	viper.SetConfigFile(path + "../config.json")
